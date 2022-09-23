@@ -130,9 +130,9 @@ jobs:
 workflows:
   rollback-test-workflow:
     jobs:
-      - configure_infrastructure
+      - create_infrastructure
       - smoke_test_failure:
           requires: 
-            configure_infrastructure
+            - create_infrastructure
 
 
